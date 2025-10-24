@@ -1,0 +1,106 @@
+# Site Settings
+title: AI Knowledge Center
+description: Specialized knowledge base for AI chatbot training and prompt engineering
+url: "https://wikigoo.github.io/VP-KB-v2/"
+baseurl: "/VP-KB-v2"  # Use "" if repo name is username.github.io
+
+# Build Settings
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  input: GFM
+  syntax_highlighter: rouge
+
+# Permalink Style
+permalink: pretty
+
+# Plugins (GitHub Pages Compatible)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-relative-links
+
+# Relative Links Configuration
+relative_links:
+  enabled: true
+  collections: true
+
+# Jekyll SEO Tag Settings
+social:
+  name: Your Name
+  links:
+    - https://github.com/yourusername
+
+# Site Features
+show_downloads: true
+show_excerpts: true
+
+# Collections (for organized content)
+collections:
+  creative_prompts:
+    output: true
+    permalink: /:collection/:name/
+  consultant_manuals:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "creative_prompts"
+    values:
+      layout: "default"
+      category: "creative"
+  - scope:
+      path: ""
+      type: "consultant_manuals"
+    values:
+      layout: "default"
+      category: "consultant"
+
+# Include/Exclude Files
+include:
+  - _pages
+  - .htaccess
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - LICENSE
+  - README.md
+
+# Sass/SCSS Settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Timezone
+timezone: America/New_York
+
+# Search Configuration
+search_enabled: true
+
+# Footer Configuration
+footer_content: >
+  AI Knowledge Center © 2025. Creative Content & Educational Resources for AI Assistants.
+
+# GitHub Pages Specific
+github:
+  repository_url: https://github.com/yourusername/repository-name
+  is_project_page: true
+
+# Liquid Settings
+liquid:
+  error_mode: strict
+  strict_filters: true
